@@ -28,7 +28,8 @@ cd network_backend
 python3 main.py 
 ```
 Программа предложит несколько вариантов работы: 
-1. `Graph processing` – является основным режимом работы, в котором программа сканирует канал Telegram в поисках пересланных сообщений с других каналов. При нахождении пересланного сообщения - программа записывает себе наличие связи, а также *записывает найденный канал в общий список каналов* `total_list.csv`. По окончанию обработки конкретного канала - программа добавляет граф к графу остальных каналов хранящийся в `graph.p` и автоматически переходит к следующему в списке каналу.
+1. `Graph processing` – является основным режимом работы, в котором программа сканирует канал Telegram в поисках пересланных сообщений с других каналов. При нахождении пересланного сообщения - программа записывает себе наличие связи, а также *записывает найденный канал в общий список каналов* `total_list.csv`. По окончанию обработки конкретного канала - программа добавляет граф к графу остальных каналов хранящийся в `graph.p` и автоматически переходит к следующему в списке каналу. <br> <br>
+![This is an image](https://cdn4.telesco.pe/file/DMjfc5vlu8sMp8lPADaP8vzsxVS3jM-ahwPGpYabLMElTMYAKNnWLTP2KigtyswbqagX3iwTIvY7V8XB5JtqBPtPqUPXfHj5lWEBJBdRI0uwpCPSTsUlbSw-dOpFw-0X0aEOUres0IZ_m8sJW1lMWCxQhZKavUj2TwnnVp3NwHjZamQ4HMNn2f808JfzS0uxTJC2gfLyj5gurelM_gcdEEUiPnvrviCFYgAcB7AqxFWnKYxQVZrJLg6OqymIuHau76FLONeNwJDkRqInyPECjIebrNVIp2Sv5H9bcmtnmkOdEiz1qUZnIEIajagAfRAreDt58yXuI_A4OFuFHfzKOw.jpg) <br> *пример работы программы в режиме Graph processing* <br> <br>
 2. `Map HTML export` – осуществляет экспорт интерактивной карты в формат HTML. По причине того, что экспорт графа состоящего из достаточно большого количества вершин и связей является не особо быстрым процессом – функция экспорта была выведена в отдельный режим. 
 
 ---
