@@ -34,8 +34,9 @@ async def main(client):
             graph = await networkx_nodes(df_forward_channels)
             try:
                 graph_main = pickle.load(open("graph.p", "rb"))
-                graph_main = nx.compose(graph_main, graph)
-                pickle.dump(graph_main, open("graph.p", "wb"))
+                pickle.dump(graph_main, open('graph_back.p', 'wb'))
+                graph_main_composed = nx.compose(graph_main, graph)
+                pickle.dump(graph_main_composed, open("graph.p", "wb"))
             except FileNotFoundError:
                 pickle.dump(graph, open("graph.p", "wb"))
 
@@ -55,6 +56,7 @@ if __name__ == '__main__':
             choices=[
                 'Graph processing',
                 'Map HTML export',
+                'Reset all'
             ]).ask()
         if main_mode == 'Graph processing':
             api_id = int(questionary.password('Api ID:').ask())
@@ -65,15 +67,12 @@ if __name__ == '__main__':
         elif main_mode == 'Map HTML export':
             graph_main = pickle.load(open("graph.p", "rb"))
             graph_export(graph_main)
-    except KeyboardInterrupt:
-        try:
-            sv = questionary.confirm("\nSave result to the next session?").ask()
-            if sv:
-                print('Saved!')
-            else:
+        elif main_mode == 'Reset all':
+            for file in ['total_list.csv', 'last', 'graph.p']:
                 try:
-                    os.remove('graph.p')
+                    os.remove(file)
                 except FileNotFoundError:
-                    pass
-        except FileNotFoundError:
-            pass
+                    continue
+            print('Reset done successfully')
+    except KeyboardInterrupt:
+        pass
