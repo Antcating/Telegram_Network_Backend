@@ -1,2 +1,3 @@
-# Telegram_Network_Backend
-Telegram channel connection graph bot
+# Telegram Network Backend
+[![Telegram Graph](https://cdn4.telesco.pe/file/koGbe3wwhVznHk4ITfDC0KgeGDpLCRoJLVnzAgdU-8AZhBNPiXthRxLJcv_vo1Jo9Q8CzgbXaN4LLKG5XT9RndCUHHfylizRYcdHEVLXlcJELugTCYpB-eEJ7H78N5yAXdRip1p5PqyDCZZQ1zUEQWzmj9RGa4kK302JQJTsGG7BUchwhnAm89MZRHYu15a0vBmXwe1mmb1QCCPrqVt3sOpEeU2XorCZSxoV4pUABJUCiqHjLMx2jdJbPjs7KcMtKhWPyWn1ftYZ2qQSqDcdpjbKHc30Y01GCKhooKcLuxOkHNW4RwTYZA5GRSm7mMa3VMYw-Z709DxwkO3vfTyq_g.jpg)](https://antcating.github.io/Telegram_Network/)
+<br>*нажмите на изображение для просмотра демо-графа на странице проекта*
