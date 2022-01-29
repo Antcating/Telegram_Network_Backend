@@ -1,9 +1,9 @@
 # Telegram Network Backend
-[![Telegram Graph](https://cdn4.telesco.pe/file/koGbe3wwhVznHk4ITfDC0KgeGDpLCRoJLVnzAgdU-8AZhBNPiXthRxLJcv_vo1Jo9Q8CzgbXaN4LLKG5XT9RndCUHHfylizRYcdHEVLXlcJELugTCYpB-eEJ7H78N5yAXdRip1p5PqyDCZZQ1zUEQWzmj9RGa4kK302JQJTsGG7BUchwhnAm89MZRHYu15a0vBmXwe1mmb1QCCPrqVt3sOpEeU2XorCZSxoV4pUABJUCiqHjLMx2jdJbPjs7KcMtKhWPyWn1ftYZ2qQSqDcdpjbKHc30Y01GCKhooKcLuxOkHNW4RwTYZA5GRSm7mMa3VMYw-Z709DxwkO3vfTyq_g.jpg)](https://antcating.github.io/Telegram_Network/)
-<br>*нажмите на изображение для просмотра демо-графа на странице проекта*
-
 ### Абстракт 
 Автоматизированная программа для поиска и построения графов связей Telegram каналов написанная на Python с использованием таких библиотек, как Telethon и Bokeh. Под связями в графе подразумеваются пересланные с других Telegram каналов сообщения. Программа автоматически ищет пересланные сообщения во всех сообщениях на канале, составляет граф конкретного канала и переходит к следующему в списке.
+
+[![Telegram Graph](https://cdn4.telesco.pe/file/koGbe3wwhVznHk4ITfDC0KgeGDpLCRoJLVnzAgdU-8AZhBNPiXthRxLJcv_vo1Jo9Q8CzgbXaN4LLKG5XT9RndCUHHfylizRYcdHEVLXlcJELugTCYpB-eEJ7H78N5yAXdRip1p5PqyDCZZQ1zUEQWzmj9RGa4kK302JQJTsGG7BUchwhnAm89MZRHYu15a0vBmXwe1mmb1QCCPrqVt3sOpEeU2XorCZSxoV4pUABJUCiqHjLMx2jdJbPjs7KcMtKhWPyWn1ftYZ2qQSqDcdpjbKHc30Y01GCKhooKcLuxOkHNW4RwTYZA5GRSm7mMa3VMYw-Z709DxwkO3vfTyq_g.jpg)](https://antcating.github.io/Telegram_Network/)
+<br>*нажмите на изображение для просмотра демо-графа на странице проекта*
 
 ---
 
