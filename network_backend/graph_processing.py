@@ -1,21 +1,13 @@
-import holoviews as hv
 import networkx as nx
 import numpy as np
-
-from datetime import date
-from random import randint
-
-hv.extension('bokeh')
-
-from bokeh.plotting import from_networkx
-from bokeh.plotting import figure
+from bokeh.io import output_file, save
 from bokeh.models import (BoxSelectTool, Circle, MultiLine, NodesAndLinkedEdges, TapTool,
-                          ColorBar, LogColorMapper, LogTicker, OpenURL, Range1d,
-                          Arrow, NormalHead, OpenHead, VeeHead, PointDrawTool)
+                          ColorBar, LogColorMapper, LogTicker, OpenURL, Range1d)
 from bokeh.models.tools import HoverTool, WheelZoomTool, PanTool
 from bokeh.palettes import Spectral4
-from bokeh.io import show, output_file, save
-from bokeh.transform import linear_cmap, log_cmap
+from bokeh.plotting import figure
+from bokeh.plotting import from_networkx
+from bokeh.transform import log_cmap
 
 
 async def networkx_nodes(df_forward_channels):  # Current channel graph tree
@@ -41,8 +33,6 @@ async def networkx_nodes(df_forward_channels):  # Current channel graph tree
 def graph_export(G):
     for start_node, end_node, _ in G.edges(data=True):  # New size generator
         G.nodes[start_node]['sizes'] = np.log10(G.nodes[start_node]['channel_forward_members'] + 1000)
-    # pos = nx.spring_layout(G)
-    # nx.draw_networkx(G, pos)
 
     output_file(filename="index.html", title="Telegram Network")
     tooltips = [
@@ -69,7 +59,6 @@ def graph_export(G):
 
     plot.title.text = "Telegram Network Map"
     plot.add_tools(
-        # HoverTool(tooltips=tooltips),
         TapTool(),
         BoxSelectTool(),
         WheelZoomTool(),
@@ -108,11 +97,10 @@ def graph_export(G):
 
     graph_renderer.inspection_policy = NodesAndLinkedEdges()
     graph_renderer.selection_policy = NodesAndLinkedEdges()
-    # plot.y_range.end = 10
     plot.add_layout(color_bar, 'right')
     plot.renderers.append(graph_renderer)
 
     save(plot)
-    # show(plot)
+    # show(plot)    # Script can open the map in browser after each channel
 
     return G
