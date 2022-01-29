@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ---
 
-#### Конфигурация и Использование
+### Конфигурация и Использование
 - Перейдите в папку `network_backend` и запустите `main.py`:
 ```
 cd network_backend
